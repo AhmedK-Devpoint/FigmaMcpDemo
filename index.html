@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <title>Avozono</title>
+  </head>
+  <body>
+    <div id="app" class="app-container">
+      <!-- Header -->
+      <header class="header">
+        <div class="logo">AVOZONO</div>
+        <nav class="header-nav">
+          <button class="nav-item active">
+            <i class="fa-solid fa-user"></i> Compte
+          </button>
+          <button class="nav-item">
+            <i class="fa-solid fa-clipboard"></i> Suivi
+          </button>
+          <button class="nav-item">
+            <i class="fa-solid fa-credit-card"></i> Paiements
+          </button>
+          <button class="nav-item">
+            <i class="fa-solid fa-message"></i> Messages
+          </button>
+        </nav>
+        <div class="user-section">
+          <div class="user-name">Sophie Delcourt</div>
+          <div class="user-role">Commissaire de justice</div>
+          <button class="menu-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+        </div>
+      </header>
+
+      <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+          <!-- Search -->
+          <div class="search-container">
+            <input type="text" placeholder="Rechercher un dossier..." class="search-input" />
+            <i class="search-icon fa-solid fa-magnifying-glass"></i>
+          </div>
+
+          <!-- Filters -->
+          <div class="filters-section">
+            <h3 class="filters-title">Filtres</h3>
+            <div class="filter-buttons">
+              <button class="filter-btn active">Tous</button>
+              <button class="filter-btn">Lu : 4</button>
+              <button class="filter-btn">Non Lu : 4</button>
+            </div>
+            <label class="checkbox-label">
+              <input type="checkbox" />
+              <span>Clôturé</span>
+            </label>
+          </div>
+
+          <!-- Stats -->
+          <div class="stats-section">
+            <div class="stat-badge">Tous : 4</div>
+            <div class="stat-badge">Non lu : 1</div>
+          </div>
+
+          <!-- Dossier List -->
+          <div class="dossier-list">
+            <div class="dossier-item active">
+              <div class="dossier-header">
+                <i class="dossier-icon fa-solid fa-folder"></i>
+                <span class="dossier-name">ADE 352</span>
+                <span class="dossier-time">10:32</span>
+              </div>
+              <p class="dossier-preview">Merci pour ces précisions. Nous allons examiner votre dossier rapidement.</p>
+              <div class="dossier-badge">Sujet : sujet de l'échange</div>
+            </div>
+
+            <div class="dossier-item">
+              <div class="dossier-header">
+                <i class="dossier-icon fa-solid fa-folder"></i>
+                <span class="dossier-name">TKZDF12983</span>
+                <span class="dossier-time">Hier</span>
+              </div>
+              <p class="dossier-preview">Document en attente de validation</p>
+              <div class="dossier-notification">1</div>
+              <div class="dossier-badge">Sujet : sujet de l'échange</div>
+            </div>
+
+            <div class="dossier-item">
+              <div class="dossier-header">
+                <i class="dossier-icon fa-solid fa-folder"></i>
+                <span class="dossier-name">BRWTC86721</span>
+                <span class="dossier-time">13/01</span>
+              </div>
+              <p class="dossier-preview">Votre demande a été prise en compte</p>
+              <div class="dossier-notification">4</div>
+              <div class="dossier-badge">Sujet : sujet de l'échange</div>
+            </div>
+
+            <div class="dossier-item">
+              <div class="dossier-header">
+                <i class="dossier-icon fa-solid fa-folder"></i>
+                <span class="dossier-name">WYUPQ39025</span>
+                <span class="dossier-time">08/01</span>
+              </div>
+              <p class="dossier-preview">Dossier clôturé avec succès</p>
+              <div class="dossier-badge closed">Clôturé</div>
+            </div>
+          </div>
+
+          <!-- New Message Button -->
+          <button class="new-message-btn">+ Nouveau message</button>
+        </aside>
+
+        <!-- Chat Area -->
+        <main class="chat-area">
+          <!-- Chat Header -->
+          <div class="chat-header">
+            <button class="chat-back-btn">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <div class="chat-title-section">
+              <h2 class="chat-title">Dossier ADE 352</h2>
+              <div class="chat-subject">Sujet : sujet de l'échange</div>
+            </div>
+            <button class="chat-close-x">
+              <i class="fa-solid fa-times"></i>
+            </button>
+            <button class="close-subject-btn">Clôturer le sujet</button>
+          </div>
+
+          <!-- Messages Container -->
+          <div class="messages-container">
+            <!-- Message from user -->
+            <div class="message-group user">
+              <div class="message-bubble">
+                Bonjour, je souhaite obtenir des informations sur mon dossier ADE 352.
+              </div>
+              <span class="message-time">10:15</span>
+            </div>
+
+            <!-- Message from assistant -->
+            <div class="message-group assistant">
+              <div class="message-bubble">
+                Bonjour, merci de votre message. Nous avons bien reçu votre demande. Un conseiller va examiner votre dossier et vous répondra dans les plus brefs délais.
+              </div>
+              <span class="message-time">10:18</span>
+            </div>
+
+            <!-- Message from user -->
+            <div class="message-group user">
+              <div class="message-bubble">
+                Pouvez-vous me dire quels documents sont nécessaires ?
+              </div>
+              <span class="message-time">10:20</span>
+            </div>
+
+            <!-- Message from assistant -->
+            <div class="message-group assistant">
+              <div class="message-bubble">
+                <p>Pour compléter votre dossier ADE 352, nous avons besoin des documents suivants :</p>
+                <ol>
+                  <li>Justificatif de domicile de moins de 3 mois</li>
+                  <li>Pièce d'identité en cours de validité</li>
+                  <li>Document attestant de votre situation.</li>
+                </ol>
+              </div>
+              <span class="message-time">10:25</span>
+            </div>
+
+            <!-- Message from user with file -->
+            <div class="message-group user">
+              <div class="message-bubble with-file">
+                <p>Merci pour ces précisions. Je vais préparer les documents.</p>
+                <div class="file-attachment">
+                  <i class="file-icon fa-solid fa-file-pdf"></i>
+                  <div class="file-info">
+                    <div class="file-name">justificatif_domicile.pdf</div>
+                    <div class="file-size">PDF • 2.4 Mo</div>
+                  </div>
+                  <button class="file-download"><i class="fa-solid fa-download"></i></button>
+                </div>
+              </div>
+              <span class="message-time">10:32</span>
+            </div>
+          </div>
+
+          <!-- Message Input Area -->
+          <div class="message-input-section">
+            <div class="input-wrapper">
+              <button class="input-btn attachment"><i class="fa-solid fa-paperclip"></i></button>
+              <input type="text" placeholder="Écrivez votre message..." class="message-input" />
+              <button class="input-btn send"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+            <p class="input-hint">Appuyez sur Entrée pour envoyer, Maj + Entrée pour une nouvelle ligne</p>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
